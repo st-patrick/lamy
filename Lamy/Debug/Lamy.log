@@ -1,0 +1,4 @@
+﻿  main.cpp
+main.obj : error LNK2019: unresolved external symbol "public: __thiscall Game::Game(void)" (??0Game@@QAE@XZ) referenced in function _SDL_main
+main.obj : error LNK2019: unresolved external symbol "public: void __thiscall Game::update(void)" (?update@Game@@QAEXXZ) referenced in function _SDL_main
+C:\SDL\Lamy\Debug\Lamy.exe : fatal error LNK1120: 2 unresolved externals
