@@ -1,0 +1,5 @@
+﻿  game.cpp
+  main.cpp
+  Generating Code...
+  C:\Git\lamy\Lamy\game.cpp(41) : warning C4715: 'Game::init': not all control paths return a value
+  Lamy.vcxproj -> C:\Git\lamy\Lamy\x64\Debug\Lamy.exe

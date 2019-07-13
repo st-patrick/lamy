@@ -5,8 +5,9 @@
 class Game {
 
 public:
-	Game();
-	~Game();
+
+	Game() {}
+	~Game() {}
 
 	bool init(const char* title, int xpos, int ypos, int width,
 		int height, int flags);
@@ -28,9 +29,8 @@ private:
 	SDL_Window* window;//window
 	SDL_Renderer* renderer;//renderer
 
-	SDL_Texture* texture;//texture variable
-	SDL_Rect* square;//SDL rectangle for the square
-
+	SDL_Rect square;
+	
 	bool running;//indicates whether the game is running
 
 };

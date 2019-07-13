@@ -13,13 +13,13 @@ bool Game::init(const char* title, int xpos, int ypos,
 			width, height, flags);
 
 		if (window != 0) {
-			std::cout << "renderer creation success\n";
-			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
-			//create surface
-			SDL_Surface* surface;
-			surface = SDL_CreateRGBSurface(0, 5, 5, 32, 255, 0, 0, 255);
-			SDL_FillRect(surface, square, SDL_MapRGB(surface->format, 255, 0, 0));
+			std::cout << "renderer creation success\n";
+			SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+
+			square = { 100, 100, 100, 100 };
+			SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+			SDL_RenderFillRect(renderer, &square);
 
 		}
 		else {
@@ -40,11 +40,16 @@ bool Game::init(const char* title, int xpos, int ypos,
 
 }
 
+void Game::update() {
+
+}
+
 void Game::render() {
 
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 	SDL_RenderSetLogicalSize(renderer, 800, 450);
 	SDL_RenderClear(renderer);
+
 	SDL_RenderPresent(renderer);
 
 }
