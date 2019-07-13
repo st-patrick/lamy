@@ -1,0 +1,5 @@
+if x = 0, don't move left, but allow right movement
+if y = 0, don't move up, but allow down movement
+if x = 790, don't move right, but allow left movement
+if y = 440, don't move down, but allow up movement
+
