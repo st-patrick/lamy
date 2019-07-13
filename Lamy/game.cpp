@@ -2,6 +2,8 @@
 #include "Game.h"
 #include<iostream>
 
+int sqrx = 10, sqry = 10;
+
 bool Game::init(const char* title, int xpos, int ypos,
 	int width, int height, int flags) {
 
@@ -15,11 +17,7 @@ bool Game::init(const char* title, int xpos, int ypos,
 		if (window != 0) {
 
 			std::cout << "renderer creation success\n";
-			SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-
-			square = { 100, 100, 100, 100 };
-			SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-			SDL_RenderFillRect(renderer, &square);
+			render();
 
 		}
 		else {
@@ -45,10 +43,17 @@ void Game::update() {
 }
 
 void Game::render() {
-
+ 
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 	SDL_RenderSetLogicalSize(renderer, 800, 450);
+
 	SDL_RenderClear(renderer);
+
+	//draw a red square: this part should work!!
+	SDL_Rect filledSqr = { sqrx, sqry, 10, 10 };
+	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	SDL_RenderFillRect(renderer, &filledSqr);
 
 	SDL_RenderPresent(renderer);
 
