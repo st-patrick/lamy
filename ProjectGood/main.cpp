@@ -16,13 +16,13 @@ void pollEvents(Window& window, Rect& rect) {
 //main function
 int main(int argc, char* argv[]) {
 	Window window("Good Code", 800, 450);
-	Rect background(window, 800, 450, 0, 0, "images/background.png");
 	Rect rect(window, 10, 10, 10, 10, 255, 0, 0, 255);
+	Rect obstacle(window, 100, 100, 350, 175, 0, 0, 0, 255);
 
 	while (!window.isClosed()) {//while the program is running
 		pollEvents(window, rect);//allows events for window and square
-		background.draw();//doesn't work but it is supposed to put in the background image
 		rect.draw();//draw the square
+		obstacle.draw();
 		window.clear();//render graphics
 	}
 
