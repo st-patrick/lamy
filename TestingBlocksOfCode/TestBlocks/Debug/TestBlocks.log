@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Git\lamy\TestingBlocksOfCode\TestBlocks\main.cpp(9,32): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-  TestBlocks.vcxproj -> C:\Git\lamy\TestingBlocksOfCode\TestBlocks\Debug\TestBlocks.exe
