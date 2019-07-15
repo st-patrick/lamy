@@ -39,6 +39,7 @@ bool Window::init() {
 		return false;
 	}
 
+	
 	//create renderer
 	m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED);
 	if (m_renderer == nullptr) {
@@ -65,6 +66,6 @@ void Window::pollEvents(SDL_Event &event) {
 //clear function is what renders the basic blank window of specified color
 void Window::clear() const {
 	SDL_RenderPresent(m_renderer);//render present shows what is being rendered
-	SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 255);//renders blank black screen
+	SDL_SetRenderDrawColor(m_renderer, 230, 230, 175, 255);//renders blank black screen
 	SDL_RenderClear(m_renderer);
 }
