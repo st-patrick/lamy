@@ -1,7 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ProjectGood.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   graphics.cpp
-C:\Git\lamy\ProjectGood\graphics.cpp(7,1): error C2512:  'Rect': no appropriate default constructor available
-  main.cpp
-  rect.cpp
-  Generating Code...
-C:\Git\lamy\ProjectGood\Rect.h(5,7): message :  see declaration of 'Rect'
+C:\Git\lamy\ProjectGood\graphics.cpp(7,1): error C2512:  'Window': no appropriate default constructor available
+C:\Git\lamy\ProjectGood\Window.h(5,7): message :  see declaration of 'Window'
+C:\Git\lamy\ProjectGood\graphics.cpp(26,57): error C2664:  'int SDL_RenderCopy(SDL_Renderer *,SDL_Texture *,const SDL_Rect *,const SDL_Rect *)': cannot convert argument 4 from 'SDL_Rect *const *' to 'const SDL_Rect *'
+C:\Git\lamy\ProjectGood\graphics.cpp(26,46): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
