@@ -1,10 +1,9 @@
-#include"Rect.h"
+#include"Window.h"
 #include"Graphics.h"//include the Graphics header file
 #include<iostream>
 #include<string>
 
-Graphics::Graphics(const Rect &rect, const std::string& path) :
-	Rect(rect), m_path(path)
+Graphics::Graphics(Window window, const std::string& path)
 {
 	//load the image from surface
 	SDL_Surface* surface = IMG_Load(path.c_str());
@@ -22,7 +21,7 @@ Graphics::~Graphics() {
 	SDL_DestroyTexture(m_texture);
 }
 
-void Graphics::Render(SDL_Renderer* renderer) const
+void Graphics::Render(Window window) const
 {
-	SDL_RenderCopy(renderer, m_texture, NULL, &m_destRect);
+	SDL_RenderCopy(m_renderer, m_texture, NULL, &m_destRect);
 }
