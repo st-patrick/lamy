@@ -15,8 +15,11 @@ public:
 	//function to handle events (just close right now)
 	void pollEvents(SDL_Event &event);
 
+	//function to draw background image in window
+	void drawBGImg(std::string img);
+
 	//used for window rendering
-	void clear() const;
+	void clear();
 
 	//tells the window whether to close and destruct or not
 	inline bool isClosed() const { return m_closed; }
@@ -37,4 +40,7 @@ private:
 protected:
 	//renderer pointer (protected so it can be used by classes that inherit from class window)
 	SDL_Renderer* m_renderer = nullptr;
+	SDL_Rect destRect = { 0, 0, 800, 450 };
+	SDL_Surface* m_surface = nullptr;
+	SDL_Texture* m_texture = nullptr;
 };

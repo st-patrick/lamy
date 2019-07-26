@@ -1,4 +1,5 @@
 #include "Rect.h"//include rect header file (for creating squares/rectangles)
+#include <SDL_image.h>
 #include<iostream>//allow console output
 
 //Rect constructor for use with a color
@@ -10,12 +11,11 @@ Rect::Rect(const Window &window, int w, int h, int x, int y, int r, int g, int b
 
 //Draw function draws the rectangle when called
 void Rect::draw() const {
-		//draw colored square
-		SDL_Rect rect = { m_x, m_y, m_w, m_h };
-		SDL_SetRenderDrawColor(m_renderer, m_r, m_g, m_b, m_a);
-		SDL_RenderFillRect(m_renderer, &rect);
+	//draw colored square
+	SDL_Rect rect = { m_x, m_y, m_w, m_h };
+	SDL_SetRenderDrawColor(m_renderer, m_r, m_g, m_b, m_a);
+	SDL_RenderFillRect(m_renderer, &rect);
 }
-
 
 //allows the square to move around the window
 void Rect::pollEvents(SDL_Event &event) {

@@ -26,12 +26,6 @@ bool Window::init() {
 		return false;
 	}
 
-	//initialize png image functions, or output error
-	if (IMG_Init(IMG_INIT_PNG) == IMG_INIT_PNG) {
-		std::cerr << "Failed to initialize IMG/PNG" << std::endl;
-		return false;
-	}
-
 	//create window
 	m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, 0);
 	if (m_window == nullptr) {
@@ -47,12 +41,13 @@ bool Window::init() {
 		return false;
 	}
 
+	IMG_Init(IMG_INIT_JPG);
+
 	return true;
 }
 
 //pollEvents for window
 void Window::pollEvents(SDL_Event &event) {
-	
 	switch (event.type) {
 	case SDL_QUIT://for the close button
 		std::cout << "Window closed" << std::endl;
@@ -63,9 +58,24 @@ void Window::pollEvents(SDL_Event &event) {
 	}
 }
 
-//clear function is what renders the basic blank window of specified color
-void Window::clear() const {
+//draw background image in window
+void Window::drawBGImg(std::string img) {
+	m_surface = IMG_Load("images/background.jpg");
+	if (m_surface == nullptr) {
+		std::cout << "Unable to load image" << std::endl;
+	}
+	else {
+		m_texture = SDL_CreateTextureFromSurface(m_renderer, m_surface);
+		SDL_FreeSurface(m_surface);
+		if (m_texture == nullptr) {
+			std::cout << "Unable to create texture" << std::endl;
+		}
+	}
+	SDL_RenderCopy(m_renderer, m_texture, NULL, &destRect);
+}
+
+//clear function is what renders the contents of the window
+void Window::clear() {
 	SDL_RenderPresent(m_renderer);//render present shows what is being rendered
-	SDL_SetRenderDrawColor(m_renderer, 230, 230, 175, 255);//renders blank black screen
 	SDL_RenderClear(m_renderer);
 }
