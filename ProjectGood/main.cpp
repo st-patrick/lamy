@@ -2,6 +2,8 @@
 #include<SDL.h>//include SDL funcitons
 #include"Window.h"//include window header file for window functions
 #include"Rect.h"//include rect header file for rect functions
+#include"Tile.h"//include tile header file for individual tiles
+#include"TileMap.h"//include tilemap header file for tile map
 
 //allow events for the window and rectangle separately
 //doesn't allow either to cancel the other out like before
@@ -21,7 +23,7 @@ int main(int argc, char* argv[]) {
 
 	while (!window.isClosed()) {//while the program is running
 		pollEvents(window, rect);//allows events for window and square
-		window.drawBGImg("images/background.jpg");
+		window.drawBGImg("images/background.jpg");//replace with tile map*****
 		rect.draw();//draw the square
 		obstacle.draw();//draw obstacle square
 		window.clear();//draw background image

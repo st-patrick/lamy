@@ -17,7 +17,7 @@ void Rect::draw() const {
 	SDL_RenderFillRect(m_renderer, &rect);
 }
 
-//allows the square to move around the window
+//allows the square to move around the window and not go through obstacle block
 void Rect::pollEvents(SDL_Event &event) {
 	
 	switch (event.type) {
