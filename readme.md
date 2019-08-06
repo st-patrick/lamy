@@ -22,3 +22,7 @@ include all SDL dependencies like so (with "SDL2/" leading):
 
 then compile using g++, the SDL libraries and all necessary file. Output executable "main"
 $ g++ game.cpp main.cpp [...more files...] -o main -lSDL2main -lSDL2 -lSDL2_image
+
+or, more concise
+
+$ g++ *.cpp -o main -lSDL2main -lSDL2 -lSDL2_image
