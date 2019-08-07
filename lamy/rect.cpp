@@ -1,5 +1,6 @@
-#include "Rect.h"//include wrap header file (wrapper class for sprite and tiles)
-#include <SDL_image.h>
+#include"Rect.h"//include rect header file (wrapper class for sprite and tiles)
+#include<SDL2/SDL.h>
+#include<SDL2_image/SDL_image.h>
 #include<iostream>//allow console output
 
 //Rect constructor for use with a color
@@ -78,10 +79,5 @@ void Rect::pollEvents(SDL_Event& event) {
 	default:
 		break;
 	}
-
-}
-
-//check to see if it is colliding with tiles on tile map
-bool Rect::checkCollision(SDL_Rect a, SDL_Rect b) {
 
 }

@@ -1,7 +1,7 @@
 #include "Window.h"//include window header file
 #include<iostream>//allow output to console
-#include<SDL.h>//allow SDL functions
-#include<SDL_image.h>//allow SDL IMG functions
+#include<SDL2/SDL.h>//allow SDL functions
+#include<SDL2_image/SDL_image.h>//allow SDL IMG functions
 
 //window constructor (accepts title, width and height)
 Window::Window(const std::string& title, int width, int height) :

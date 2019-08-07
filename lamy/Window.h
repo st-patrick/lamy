@@ -1,6 +1,6 @@
 #pragma once
 #include<string>//allow string functions
-#include<SDL.h>//allow SDL functions
+#include<SDL2/SDL.h>//allow SDL functions
 
 class Window {
 public:
