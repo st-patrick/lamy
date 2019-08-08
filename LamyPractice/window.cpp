@@ -1,7 +1,7 @@
 #include "Window.h"//include window header file
 #include<iostream>//allow output to console
-#include<SDL2/SDL.h>//allow SDL functions
-#include<SDL2_image/SDL_image.h>//allow SDL IMG functions
+#include<SDL.h>//allow SDL functions
+#include<SDL_image.h>//allow SDL IMG functions
 
 //window constructor (accepts title, width and height)
 Window::Window(const std::string& title, int width, int height) :
@@ -79,4 +79,14 @@ void Window::drawBGImg(std::string img) {
 void Window::clear() {
 	SDL_RenderPresent(m_renderer);//render present shows what is being rendered
 	SDL_RenderClear(m_renderer);
+}
+
+//get width
+int Window::getWidth() {
+	return m_width;
+}
+
+//get height
+int Window::getHeight() {
+	return m_height;
 }

@@ -1,5 +1,5 @@
 #pragma once
-#include<SDL2/SDL.h>//include SDL2
+#include<SDL.h>//include SDL2
 #include"Window.h"//include Window for inheritance
 
 class Tiles : public Window {
@@ -7,6 +7,9 @@ public:
 
 	//constructor
 	Tiles(const Window& window, int x, int y, int type);
+
+	//total number of tiles
+	const int TOTAL_TILES = 100;
 
 protected:
 	//tile position variables
@@ -26,6 +29,8 @@ protected:
 	//dimensions of tiles
 	const int TILE_WIDTH = 32;
 	const int TILE_HEIGHT = 32;
+
+	//dimensions of level
 
 	//dimensions of screen
 	const int SCREEN_WIDTH = m_width;

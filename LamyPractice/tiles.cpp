@@ -1,6 +1,6 @@
 #include<iostream>
 #include"Tiles.h"//tile header file
-#include<SDL2/SDL.h>
+#include<SDL.h>
 
 Tiles::Tiles(const Window& window, int x, int y, int type) :
 	Window(window), mx(x), my(y), mtype(type)

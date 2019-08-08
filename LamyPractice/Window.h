@@ -1,6 +1,6 @@
 #pragma once
 #include<string>//allow string functions
-#include<SDL2/SDL.h>//allow SDL functions
+#include<SDL.h>//allow SDL functions
 
 class Window {
 public:
@@ -20,6 +20,10 @@ public:
 
 	//used for window rendering
 	void clear();
+
+	//get window properties
+	int getWidth();
+	int getHeight();
 
 	//tells the window whether to close and destruct or not
 	inline bool isClosed() const { return m_closed; }
