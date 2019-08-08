@@ -1,5 +1,6 @@
 #pragma once
 #include "Window.h"//include window header file
+#include<SDL2/SDL.h>//include SDL2
 #include<string>//allow string functions
 
 class Rect : public Window {//Rect inherits from window
@@ -9,9 +10,6 @@ public:
 
 	void draw() const;//draw function to display rectangles
 	void pollEvents(SDL_Event& event);//handle rectangle events
-
-	bool checkCollision(SDL_Rect a, SDL_Rect b);
-	bool touchesWall(SDL_Rect box, Tile* tiles[]);
 
 private:
 	//variables for width, height, position, and color
