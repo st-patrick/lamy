@@ -8,7 +8,7 @@ public:
 	static const int PLAYER_W = 20;
 	static const int PLAYER_H = 20;
 
-	//object dimensions
+	//object dimensions (things like keys)
 	static const int OBJ_H = 10;
 	static const int OBJ_W = 10;
 
@@ -20,6 +20,11 @@ public:
 
 	//constructor for use with an image
 	PlayObjs(const Window& window, int w, int h, int x, int y, bool primary, std::string& path);
+
+	//grab or drop objects
+	void carryObj() {
+		//either pick up or drop the object
+	}
 
 	void drawColor();
 

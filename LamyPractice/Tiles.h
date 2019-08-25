@@ -9,7 +9,7 @@ public:
 	Tiles(const Window& window, int x, int y, int type);
 
 	//total number of tiles
-	const int TOTAL_TILES = 100;
+	const int TOTAL_TILES = 576;
 
 protected:
 	//tile position variables
@@ -31,6 +31,8 @@ protected:
 	const int TILE_HEIGHT = 32;
 
 	//dimensions of level
+	const int LEVEL_WIDTH = 2 * m_width;
+	const int LEVEL_HEIGHT = 2 * m_height;
 
 	//dimensions of screen
 	const int SCREEN_WIDTH = m_width;

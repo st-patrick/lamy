@@ -10,7 +10,7 @@ Window window("Lamy", 800, 450);//window
 const int TILE_WIDTH = 32;
 const int TILE_HEIGHT = 32;
 
-//dimensions of level
+//dimensions of level and total tiles
 const int LEVEL_WIDTH = 1024;
 const int LEVEL_HEIGHT = 576;
 const int TOTAL_TILES = 576;
